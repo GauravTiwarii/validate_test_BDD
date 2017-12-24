@@ -60,16 +60,16 @@ describe('A Validator', function(){
 
 	describe('will return error.five for divisible by 5, ', function(){
 		it('like 5', function(){
-			expect(validate(5)).to.be.deep.equal(['error.five'])
+			expect(validator(5)).to.be.deep.equal(['error.five'])
 		})
 		it('like 10', function(){
-			expect(validate(10)).to.be.deep.equal(['error.five'])
+			expect(validator(10)).to.be.deep.equal(['error.five'])
 		})
 	})
 
 
 	it('will return one error for each rule of the number', function(){
-		expect(validate(15)).to.be.deep.equal(['error.three', 'error.five'])
+		expect(validator(15)).to.be.deep.equal(['error.three', 'error.five'])
 	})
 
 
